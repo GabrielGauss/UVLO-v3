@@ -1,5 +1,7 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useEffect, useState, useRef } from 'react';
+import bg01 from '/public/bg-01.png?url';
+import logoWt from '/public/uvlo-logo-wt.png?url';
 
 export default function Hero() {
   const [isGlitching, setIsGlitching] = useState(false);
@@ -28,7 +30,7 @@ export default function Hero() {
       >
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-obsidian/60 to-obsidian z-10" />
         <img 
-          src={`${import.meta.env.BASE_URL}bg-01.png`.replace('//', '/')} 
+          src={bg01} 
           alt="Live Performance" 
           className="w-full h-full object-cover opacity-50 scale-110 contrast-125 saturate-[0.5]"
           onError={(e) => {
@@ -51,19 +53,19 @@ export default function Hero() {
                 animate={{ x: [-5, 5, -5], opacity: [0.5, 0.8, 0.5] }}
                 className="absolute inset-0 z-10 mix-blend-screen invert opacity-30"
               >
-                <img src={`${import.meta.env.BASE_URL}uvlo-logo-wt.png`.replace('//', '/')} alt="" className="w-full h-auto max-h-[25vh] object-contain translate-x-2" />
+                <img src={logoWt} alt="" className="w-full h-auto max-h-[25vh] object-contain translate-x-2" />
               </motion.div>
               <motion.div 
                 animate={{ x: [5, -5, 5], opacity: [0.5, 0.8, 0.5] }}
                 className="absolute inset-0 z-10 mix-blend-multiply opacity-30"
               >
-                <img src={`${import.meta.env.BASE_URL}uvlo-logo-wt.png`.replace('//', '/')} alt="" className="w-full h-auto max-h-[25vh] object-contain -translate-x-2" />
+                <img src={logoWt} alt="" className="w-full h-auto max-h-[25vh] object-contain -translate-x-2" />
               </motion.div>
             </>
           )}
  
           <motion.img 
-            src={`${import.meta.env.BASE_URL}uvlo-logo-wt.png`.replace('//', '/')} 
+            src={logoWt} 
             alt="Ultimo Velo Logo" 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ 

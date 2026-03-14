@@ -1,4 +1,6 @@
 import { motion } from 'motion/react';
+import img1 from '/public/img1.png?url';
+import img2 from '/public/img2.png?url';
 
 export default function Bio() {
   return (
@@ -22,7 +24,7 @@ export default function Bio() {
           >
             <div className="border-4 border-accent p-2 bg-obsidian brutalist-shadow">
               <img 
-                src={`${import.meta.env.BASE_URL}img1.png`.replace('//', '/')} 
+                src={img1} 
                 alt="Facundo & Ezequiel Romero" 
                 className="w-full h-auto grayscale contrast-125"
                 referrerPolicy="no-referrer"
@@ -42,7 +44,7 @@ export default function Bio() {
           >
             <div className="border-4 border-white p-2 bg-obsidian shadow-[15px_15px_0px_0px_rgba(255,255,255,1)]">
               <img 
-                src={`${import.meta.env.BASE_URL}img2.png`.replace('//', '/')} 
+                src={img2} 
                 alt="Gabriel Veron - Batería" 
                 className="w-full h-auto grayscale contrast-150 brightness-75"
                 referrerPolicy="no-referrer"
