@@ -28,7 +28,7 @@ export default function Hero() {
       >
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-obsidian/60 to-obsidian z-10" />
         <img 
-          src="/bg-01.png" 
+          src="./bg-01.png" 
           alt="Live Performance" 
           className="w-full h-full object-cover opacity-50 scale-110 contrast-125 saturate-[0.5]"
           onError={(e) => {
@@ -51,19 +51,19 @@ export default function Hero() {
                 animate={{ x: [-5, 5, -5], opacity: [0.5, 0.8, 0.5] }}
                 className="absolute inset-0 z-10 mix-blend-screen invert opacity-30"
               >
-                <img src="/uvlo-logo-wt.png" alt="" className="w-full h-auto max-h-[25vh] object-contain translate-x-2" />
+                <img src="./uvlo-logo-wt.png" alt="" className="w-full h-auto max-h-[25vh] object-contain translate-x-2" />
               </motion.div>
               <motion.div 
                 animate={{ x: [5, -5, 5], opacity: [0.5, 0.8, 0.5] }}
                 className="absolute inset-0 z-10 mix-blend-multiply opacity-30"
               >
-                <img src="/uvlo-logo-wt.png" alt="" className="w-full h-auto max-h-[25vh] object-contain -translate-x-2" />
+                <img src="./uvlo-logo-wt.png" alt="" className="w-full h-auto max-h-[25vh] object-contain -translate-x-2" />
               </motion.div>
             </>
           )}
 
           <motion.img 
-            src="/uvlo-logo-wt.png" 
+            src="./uvlo-logo-wt.png" 
             alt="Ultimo Velo Logo" 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ 

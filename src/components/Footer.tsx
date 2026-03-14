@@ -11,12 +11,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 items-start mb-16">
           <div className="md:col-span-4 flex flex-col gap-4">
             <img 
-              src="/uvlo-logo-wt.png" 
+              src="./uvlo-logo-wt.png" 
               alt="Ultimo Velo" 
               className="h-8 w-auto object-contain opacity-90 grayscale hover:grayscale-0 transition-all duration-1000 self-start" 
               onError={(e) => {
                 e.currentTarget.style.display = 'none';
-                e.currentTarget.parentElement!.innerHTML += '<span class="text-xl font-serif text-white italic tracking-tighter font-bold">Último Velo</span>';
+                const parent = e.currentTarget.parentElement;
+                if (parent) {
+                  parent.innerHTML += '<span class="text-xl font-serif text-white italic tracking-tighter font-bold">Último Velo</span>';
+                }
               }}
             />
             <p className="font-mono text-[9px] text-white/20 leading-relaxed uppercase tracking-[0.1em] max-w-xs">

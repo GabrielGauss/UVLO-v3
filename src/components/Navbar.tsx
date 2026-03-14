@@ -10,12 +10,15 @@ export default function Navbar() {
     >
       <div className="flex items-center gap-4">
         <img 
-          src="/ico-wt.png" 
+          src="./ico-wt.png" 
           alt="UV" 
           className="w-10 h-10 object-contain" 
           onError={(e) => {
             e.currentTarget.style.display = 'none';
-            e.currentTarget.parentElement!.innerHTML += '<span class="text-2xl font-serif text-white">UV</span>';
+            const parent = e.currentTarget.parentElement;
+            if (parent) {
+              parent.innerHTML += '<span class="text-2xl font-serif text-white">UV</span>';
+            }
           }}
         />
         <span className="font-mono text-[10px] tracking-[0.4em] uppercase hidden sm:block text-white/60">Ultimo Velo</span>

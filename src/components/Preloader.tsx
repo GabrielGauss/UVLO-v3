@@ -8,7 +8,16 @@ export default function Preloader() {
     const timer = setTimeout(() => {
       setIsVisible(false);
     }, 2000);
-    return () => clearTimeout(timer);
+
+    // Safety fallback: ensure preloader hides even if there's a crash or delay
+    const safetyTimer = setTimeout(() => {
+      setIsVisible(false);
+    }, 5000);
+
+    return () => {
+      clearTimeout(timer);
+      clearTimeout(safetyTimer);
+    };
   }, []);
 
   return (
@@ -35,13 +44,16 @@ export default function Preloader() {
             className="relative"
           >
             <img
-              src="/ico-wt.png"
+              src="./ico-wt.png"
               alt="Ultimo Velo Icon"
               className="w-32 h-32 object-contain"
               onError={(e) => {
                 // Fallback if image fails
                 e.currentTarget.style.display = 'none';
-                e.currentTarget.parentElement!.innerHTML = '<span class="text-6xl font-serif text-white">UV</span>';
+                const parent = e.currentTarget.parentElement;
+                if (parent) {
+                  parent.innerHTML = '<span class="text-6xl font-serif text-white">UV</span>';
+                }
               }}
             />
           </motion.div>
