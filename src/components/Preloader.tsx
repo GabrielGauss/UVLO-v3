@@ -44,7 +44,7 @@ export default function Preloader() {
             className="relative"
           >
             <img
-              src="./ico-wt.png"
+              src="/ico-wt.png"
               alt="Ultimo Velo Icon"
               className="w-32 h-32 object-contain"
               onError={(e) => {
