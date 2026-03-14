@@ -10,7 +10,7 @@ export default function Navbar() {
     >
       <div className="flex items-center gap-4">
         <img 
-          src="/ico-wt.png" 
+          src="./ico-wt.png" 
           alt="UV" 
           className="w-10 h-10 object-contain" 
           onError={(e) => {

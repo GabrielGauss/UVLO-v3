@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 items-start mb-16">
           <div className="md:col-span-4 flex flex-col gap-4">
             <img 
-              src="/uvlo-logo-wt.png" 
+              src="./uvlo-logo-wt.png" 
               alt="Ultimo Velo" 
               className="h-8 w-auto object-contain opacity-90 grayscale hover:grayscale-0 transition-all duration-1000 self-start" 
               onError={(e) => {
