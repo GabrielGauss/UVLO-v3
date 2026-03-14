@@ -44,15 +44,19 @@ export default function Preloader() {
             className="relative"
           >
             <img
-              src="./ico-wt.png"
+              src="/ico-wt.png"
               alt="Ultimo Velo Icon"
               className="w-32 h-32 object-contain"
               onError={(e) => {
                 // Fallback if image fails
-                e.currentTarget.style.display = 'none';
-                const parent = e.currentTarget.parentElement;
+                const target = e.currentTarget;
+                target.style.display = 'none';
+                const parent = target.parentElement;
                 if (parent) {
-                  parent.innerHTML = '<span class="text-6xl font-serif text-white">UV</span>';
+                  const span = document.createElement('span');
+                  span.className = 'text-6xl font-serif text-white';
+                  span.innerText = 'UV';
+                  parent.appendChild(span);
                 }
               }}
             />

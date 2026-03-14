@@ -10,14 +10,18 @@ export default function Navbar() {
     >
       <div className="flex items-center gap-4">
         <img 
-          src="./ico-wt.png" 
+          src="/ico-wt.png" 
           alt="UV" 
           className="w-10 h-10 object-contain" 
           onError={(e) => {
-            e.currentTarget.style.display = 'none';
-            const parent = e.currentTarget.parentElement;
+            const target = e.currentTarget;
+            target.style.display = 'none';
+            const parent = target.parentElement;
             if (parent) {
-              parent.innerHTML += '<span class="text-2xl font-serif text-white">UV</span>';
+              const span = document.createElement('span');
+              span.className = 'text-2xl font-serif text-white';
+              span.innerText = 'UV';
+              parent.appendChild(span);
             }
           }}
         />

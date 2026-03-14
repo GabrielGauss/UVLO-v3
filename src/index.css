@@ -18,7 +18,6 @@
 @layer base {
   body {
     @apply bg-obsidian text-signal font-mono selection:bg-accent selection:text-obsidian;
-    cursor: none;
     overflow-x: hidden;
   }
 
