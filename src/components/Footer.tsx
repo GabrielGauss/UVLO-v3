@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { Instagram, Youtube, Facebook, ArrowUp } from 'lucide-react';
-import logoWt from '/public/uvlo-logo-wt.png?url';
+import logoWt from '@/src/assets/uvlo-logo-wt.png';
 
 export default function Footer() {
   return (

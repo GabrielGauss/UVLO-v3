@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useEffect, useState, useRef } from 'react';
-import bg01 from '/public/bg-01.png?url';
-import logoWt from '/public/uvlo-logo-wt.png?url';
+import bg01 from '@/src/assets/bg-01.png';
+import logoWt from '@/src/assets/uvlo-logo-wt.png';
 
 export default function Hero() {
   const [isGlitching, setIsGlitching] = useState(false);

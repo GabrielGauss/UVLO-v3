@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import icoWt from '/public/ico-wt.png?url';
+import icoWt from '@/src/assets/ico-wt.png';
 
 export default function Navbar() {
   return (

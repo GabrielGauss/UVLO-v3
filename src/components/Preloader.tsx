@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { useEffect, useState } from 'react';
-import icoWt from '/public/ico-wt.png?url';
+import icoWt from '@/src/assets/ico-wt.png';
 
 export default function Preloader() {
   const [isVisible, setIsVisible] = useState(true);

@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
-import img1 from '/public/img1.png?url';
-import img2 from '/public/img2.png?url';
+import img1 from '@/src/assets/img1.png';
+import img2 from '@/src/assets/img2.png';
 
 export default function Bio() {
   return (
