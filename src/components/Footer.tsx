@@ -1,6 +1,5 @@
 import { motion } from 'motion/react';
 import { Instagram, Youtube, Facebook, ArrowUp } from 'lucide-react';
-import logoWt from '../assets/uvlo-logo-wt.png';
 
 export default function Footer() {
   return (
@@ -12,15 +11,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 items-start mb-16">
           <div className="md:col-span-4 flex flex-col gap-4">
             <img 
-              src={logoWt} 
+              src="/uvlo-logo-wt.png" 
               alt="Ultimo Velo" 
               className="h-8 w-auto object-contain opacity-90 grayscale hover:grayscale-0 transition-all duration-1000 self-start" 
               onError={(e) => {
                 const target = e.currentTarget;
-                if (target.src.includes('assets')) {
-                  target.src = "/uvlo-logo-wt.png";
-                  return;
-                }
                 target.style.display = 'none';
                 const parent = target.parentElement;
                 if (parent) {
