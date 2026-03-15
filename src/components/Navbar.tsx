@@ -1,5 +1,4 @@
 import { motion } from 'motion/react';
-import icoWt from '@/src/assets/ico-wt.png';
 
 export default function Navbar() {
   return (
@@ -11,7 +10,7 @@ export default function Navbar() {
     >
       <div className="flex items-center gap-4">
         <img 
-          src={icoWt} 
+          src="/ico-wt.png" 
           alt="UV" 
           className="w-10 h-10 object-contain" 
           onError={(e) => {
@@ -32,6 +31,10 @@ export default function Navbar() {
       <div className="flex items-center gap-10 font-mono text-[10px] uppercase tracking-widest">
         <a href="#vault" className="hover:text-accent transition-colors relative group">
           Bóveda
+          <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-accent transition-all group-hover:w-full" />
+        </a>
+        <a href="#discography" className="hover:text-accent transition-colors relative group">
+          Discos
           <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-accent transition-all group-hover:w-full" />
         </a>
         <a href="#manifest" className="hover:text-accent transition-colors relative group">

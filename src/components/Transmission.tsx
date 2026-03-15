@@ -63,7 +63,8 @@ export default function Transmission() {
           </div>
 
           <div className="flex flex-col gap-8">
-            <div className="bg-obsidian p-8 brutalist-shadow-small">
+            <div className="bg-obsidian p-8 brutalist-shadow-small relative overflow-hidden">
+              <img src="/uvlo-logo-bl.png" alt="" className="absolute -right-10 -bottom-10 w-48 h-auto opacity-10 pointer-events-none grayscale invert" />
               <h3 className="font-mono text-[9px] text-accent uppercase tracking-[0.4em] mb-4 font-black">Booking // Consultas</h3>
               <a href="mailto:ultimovelo@gmail.com" className="font-mono text-xl md:text-2xl hover:text-accent transition-colors text-white font-black break-all">
                 ULTIMOVELO@GMAIL.COM

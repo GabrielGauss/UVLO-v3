@@ -1,7 +1,5 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useEffect, useState, useRef } from 'react';
-import bg01 from '@/src/assets/bg-01.png';
-import logoWt from '@/src/assets/uvlo-logo-wt.png';
 
 export default function Hero() {
   const [isGlitching, setIsGlitching] = useState(false);
@@ -30,7 +28,7 @@ export default function Hero() {
       >
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-obsidian/60 to-obsidian z-10" />
         <img 
-          src={bg01} 
+          src="/bg-01.png" 
           alt="Live Performance" 
           className="w-full h-full object-cover opacity-50 scale-110 contrast-125 saturate-[0.5]"
           onError={(e) => {
@@ -39,6 +37,16 @@ export default function Hero() {
         />
         {/* Animated Noise Texture */}
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')] brightness-100 contrast-150" />
+        
+        {/* SVG Watermark */}
+        <motion.div 
+          initial={{ opacity: 0, rotate: -10 }}
+          animate={{ opacity: 0.05, rotate: 0 }}
+          transition={{ duration: 2 }}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-auto pointer-events-none z-0"
+        >
+          <img src="/ultimo%20velo-svg.svg" alt="" className="w-full h-auto opacity-20" />
+        </motion.div>
       </motion.div>
 
       <motion.div
@@ -53,19 +61,19 @@ export default function Hero() {
                 animate={{ x: [-5, 5, -5], opacity: [0.5, 0.8, 0.5] }}
                 className="absolute inset-0 z-10 mix-blend-screen invert opacity-30"
               >
-                <img src={logoWt} alt="" className="w-full h-auto max-h-[25vh] object-contain translate-x-2" />
+                <img src="/uvlo-logo-wt.png" alt="" className="w-full h-auto max-h-[25vh] object-contain translate-x-2" />
               </motion.div>
               <motion.div 
                 animate={{ x: [5, -5, 5], opacity: [0.5, 0.8, 0.5] }}
                 className="absolute inset-0 z-10 mix-blend-multiply opacity-30"
               >
-                <img src={logoWt} alt="" className="w-full h-auto max-h-[25vh] object-contain -translate-x-2" />
+                <img src="/uvlo-logo-wt.png" alt="" className="w-full h-auto max-h-[25vh] object-contain -translate-x-2" />
               </motion.div>
             </>
           )}
  
           <motion.img 
-            src={logoWt} 
+            src="/uvlo-logo-wt.png" 
             alt="Ultimo Velo Logo" 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ 

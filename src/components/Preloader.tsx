@@ -1,6 +1,5 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { useEffect, useState } from 'react';
-import icoWt from '@/src/assets/ico-wt.png';
 
 export default function Preloader() {
   const [isVisible, setIsVisible] = useState(true);
@@ -45,7 +44,7 @@ export default function Preloader() {
             className="relative"
           >
             <img
-              src={icoWt}
+              src="/ico-wt.png"
               alt="Ultimo Velo Icon"
               className="w-32 h-32 object-contain"
               onError={(e) => {

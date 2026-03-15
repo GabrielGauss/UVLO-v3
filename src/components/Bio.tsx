@@ -1,6 +1,4 @@
 import { motion } from 'motion/react';
-import img1 from '@/src/assets/img1.png';
-import img2 from '@/src/assets/img2.png';
 
 export default function Bio() {
   return (
@@ -24,7 +22,7 @@ export default function Bio() {
           >
             <div className="border-4 border-accent p-2 bg-obsidian brutalist-shadow">
               <img 
-                src={img1} 
+                src="/img1.png" 
                 alt="Facundo & Ezequiel Romero" 
                 className="w-full h-auto grayscale contrast-125"
                 referrerPolicy="no-referrer"
@@ -44,7 +42,7 @@ export default function Bio() {
           >
             <div className="border-4 border-white p-2 bg-obsidian shadow-[15px_15px_0px_0px_rgba(255,255,255,1)]">
               <img 
-                src={img2} 
+                src="/img2.png" 
                 alt="Gabriel Veron - Batería" 
                 className="w-full h-auto grayscale contrast-150 brightness-75"
                 referrerPolicy="no-referrer"
@@ -52,6 +50,27 @@ export default function Bio() {
             </div>
             <div className="absolute -top-6 -right-6 font-mono text-[10px] text-white bg-obsidian border-2 border-white px-4 py-2 font-black uppercase tracking-widest">
               [ GABRIEL_VERON ]
+            </div>
+          </motion.div>
+
+          {/* Third Image - Group / Logo Alt */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.5 }}
+            className="col-span-6 col-start-3 -mt-16 relative z-30"
+          >
+            <div className="border-4 border-accent p-2 bg-obsidian brutalist-shadow-small">
+              <img 
+                src="/Ultimo%20Velo%20logo1.png" 
+                alt="Ultimo Velo Group" 
+                className="w-full h-auto grayscale contrast-125 brightness-90"
+                referrerPolicy="no-referrer"
+              />
+            </div>
+            <div className="absolute -bottom-4 -right-4 font-mono text-[8px] text-obsidian bg-accent px-3 py-1 font-black uppercase tracking-widest">
+              [ UV_DNA ]
             </div>
           </motion.div>
         </div>

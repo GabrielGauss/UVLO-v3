@@ -5,6 +5,7 @@ import CustomCursor from './components/CustomCursor';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Bio from './components/Bio';
+import Discography from './components/Discography';
 import Manifest from './components/Manifest';
 import KineticVault from './components/KineticVault';
 import Pulse from './components/Pulse';
@@ -71,6 +72,7 @@ export default function App() {
       <Hero />
       <KineticVault />
       <Bio />
+      <Discography />
       <Manifest />
       <Pulse />
       <Transmission />
