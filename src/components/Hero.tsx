@@ -1,8 +1,5 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useEffect, useState, useRef } from 'react';
-import bg01 from '../assets/bg-01.png';
-import logoWt from '../assets/uvlo-logo-wt.png';
-import logoSvg from '../assets/logo-svg.svg';
 
 export default function Hero() {
   const [isGlitching, setIsGlitching] = useState(false);
@@ -31,7 +28,7 @@ export default function Hero() {
       >
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-obsidian/60 to-obsidian z-10" />
         <img 
-          src={bg01} 
+          src="/bg-01.png" 
           alt="Live Performance" 
           className="w-full h-full object-cover opacity-50 scale-110 contrast-125 saturate-[0.5]"
           referrerPolicy="no-referrer"
@@ -53,7 +50,7 @@ export default function Hero() {
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-auto pointer-events-none z-0"
         >
           <img 
-            src={logoSvg} 
+            src="/ultimo-velo-svg.svg" 
             alt="" 
             className="w-full h-auto opacity-20" 
             referrerPolicy="no-referrer"
@@ -74,7 +71,7 @@ export default function Hero() {
                 className="absolute inset-0 z-10 mix-blend-screen invert opacity-30"
               >
                 <img 
-                  src={logoWt} 
+                  src="/uvlo-logo-wt.png" 
                   alt="" 
                   className="w-full h-auto max-h-[25vh] object-contain translate-x-2" 
                   referrerPolicy="no-referrer"
@@ -85,7 +82,7 @@ export default function Hero() {
                 className="absolute inset-0 z-10 mix-blend-multiply opacity-30"
               >
                 <img 
-                  src={logoWt} 
+                  src="/uvlo-logo-wt.png" 
                   alt="" 
                   className="w-full h-auto max-h-[25vh] object-contain -translate-x-2" 
                   referrerPolicy="no-referrer"
@@ -95,7 +92,7 @@ export default function Hero() {
           )}
  
           <motion.img 
-            src={logoWt} 
+            src="/uvlo-logo-wt.png" 
             alt="Ultimo Velo Logo" 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ 

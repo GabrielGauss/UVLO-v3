@@ -1,7 +1,6 @@
 import { motion } from 'motion/react';
 import { Send, Check } from 'lucide-react';
 import { useState } from 'react';
-import logoBl from '../assets/uvlo-logo-bl.png';
 
 export default function Transmission() {
   const [email, setEmail] = useState('');
@@ -66,7 +65,7 @@ export default function Transmission() {
           <div className="flex flex-col gap-8">
             <div className="bg-obsidian p-8 brutalist-shadow-small relative overflow-hidden">
               <img 
-                src={logoBl} 
+                src="/uvlo-logo-bl.png" 
                 alt="" 
                 className="absolute -right-10 -bottom-10 w-48 h-auto opacity-10 pointer-events-none grayscale invert" 
                 referrerPolicy="no-referrer"
