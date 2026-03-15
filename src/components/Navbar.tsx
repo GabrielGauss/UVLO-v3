@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import icoWt from '../assets/ico-wt.png';
 
 export default function Navbar() {
   return (
@@ -10,7 +11,7 @@ export default function Navbar() {
     >
       <div className="flex items-center gap-4">
         <img 
-          src="/ico-wt.png?v=1.1" 
+          src={icoWt} 
           alt="UV" 
           className="w-10 h-10 object-contain" 
           referrerPolicy="no-referrer"
