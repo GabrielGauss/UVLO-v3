@@ -10,9 +10,10 @@ export default function Navbar() {
     >
       <div className="flex items-center gap-4">
         <img 
-          src="/ico-wt.png" 
+          src="/ico-wt.png?v=1.1" 
           alt="UV" 
           className="w-10 h-10 object-contain" 
+          referrerPolicy="no-referrer"
           onError={(e) => {
             const target = e.currentTarget;
             target.style.display = 'none';

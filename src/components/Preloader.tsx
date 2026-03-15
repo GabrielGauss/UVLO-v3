@@ -44,9 +44,10 @@ export default function Preloader() {
             className="relative"
           >
             <img
-              src="/ico-wt.png"
+              src="/ico-wt.png?v=1.1"
               alt="Ultimo Velo Icon"
               className="w-32 h-32 object-contain"
+              referrerPolicy="no-referrer"
               onError={(e) => {
                 // Fallback if image fails
                 const target = e.currentTarget;
