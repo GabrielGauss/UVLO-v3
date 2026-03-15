@@ -50,7 +50,7 @@ export default function Hero() {
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-auto pointer-events-none z-0"
         >
           <img 
-            src="/ultimo-velo-svg.svg" 
+            src="/UVLO_Logo_V_BN.svg" 
             alt="" 
             className="w-full h-auto opacity-20" 
             referrerPolicy="no-referrer"
