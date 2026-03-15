@@ -1,5 +1,8 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useEffect, useState, useRef } from 'react';
+import bg01 from '../assets/bg-01.png';
+import logoWt from '../assets/uvlo-logo-wt.png';
+import logoSvg from '../assets/logo-svg.svg';
 
 export default function Hero() {
   const [isGlitching, setIsGlitching] = useState(false);
@@ -28,11 +31,16 @@ export default function Hero() {
       >
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-obsidian/60 to-obsidian z-10" />
         <img 
-          src="/bg-01.png" 
+          src={bg01} 
           alt="Live Performance" 
           className="w-full h-full object-cover opacity-50 scale-110 contrast-125 saturate-[0.5]"
           onError={(e) => {
-            e.currentTarget.src = "https://picsum.photos/seed/rock-band-live/1920/1080?grayscale";
+            const target = e.currentTarget;
+            if (target.src.includes('assets')) {
+              target.src = "/bg-01.png";
+            } else {
+              target.src = "https://picsum.photos/seed/rock-band-live/1920/1080?grayscale";
+            }
           }}
         />
         {/* Animated Noise Texture */}
@@ -45,7 +53,14 @@ export default function Hero() {
           transition={{ duration: 2 }}
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-auto pointer-events-none z-0"
         >
-          <img src="/ultimo%20velo-svg.svg" alt="" className="w-full h-auto opacity-20" />
+          <img 
+            src={logoSvg} 
+            alt="" 
+            className="w-full h-auto opacity-20" 
+            onError={(e) => {
+              e.currentTarget.src = "/ultimo%20velo-svg.svg";
+            }}
+          />
         </motion.div>
       </motion.div>
 
@@ -61,19 +76,29 @@ export default function Hero() {
                 animate={{ x: [-5, 5, -5], opacity: [0.5, 0.8, 0.5] }}
                 className="absolute inset-0 z-10 mix-blend-screen invert opacity-30"
               >
-                <img src="/uvlo-logo-wt.png" alt="" className="w-full h-auto max-h-[25vh] object-contain translate-x-2" />
+                <img 
+                  src={logoWt} 
+                  alt="" 
+                  className="w-full h-auto max-h-[25vh] object-contain translate-x-2" 
+                  onError={(e) => { e.currentTarget.src = "/uvlo-logo-wt.png"; }}
+                />
               </motion.div>
               <motion.div 
                 animate={{ x: [5, -5, 5], opacity: [0.5, 0.8, 0.5] }}
                 className="absolute inset-0 z-10 mix-blend-multiply opacity-30"
               >
-                <img src="/uvlo-logo-wt.png" alt="" className="w-full h-auto max-h-[25vh] object-contain -translate-x-2" />
+                <img 
+                  src={logoWt} 
+                  alt="" 
+                  className="w-full h-auto max-h-[25vh] object-contain -translate-x-2" 
+                  onError={(e) => { e.currentTarget.src = "/uvlo-logo-wt.png"; }}
+                />
               </motion.div>
             </>
           )}
  
           <motion.img 
-            src="/uvlo-logo-wt.png" 
+            src={logoWt} 
             alt="Ultimo Velo Logo" 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ 
@@ -85,6 +110,10 @@ export default function Hero() {
             className="w-full h-auto max-h-[25vh] object-contain drop-shadow-[0_0_50px_rgba(255,255,255,0.15)] relative z-20"
             onError={(e) => {
               const target = e.currentTarget;
+              if (target.src.includes('assets')) {
+                target.src = "/uvlo-logo-wt.png";
+                return;
+              }
               target.style.display = 'none';
               const parent = target.parentElement;
               if (parent) {

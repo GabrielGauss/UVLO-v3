@@ -1,4 +1,7 @@
 import { motion } from 'motion/react';
+import img1 from '../assets/img1.png';
+import img2 from '../assets/img2.png';
+import logoAlt from '../assets/logo-alt.png';
 
 export default function Bio() {
   return (
@@ -22,10 +25,11 @@ export default function Bio() {
           >
             <div className="border-4 border-accent p-2 bg-obsidian brutalist-shadow">
               <img 
-                src="/img1.png" 
+                src={img1} 
                 alt="Facundo & Ezequiel Romero" 
                 className="w-full h-auto grayscale contrast-125"
                 referrerPolicy="no-referrer"
+                onError={(e) => { e.currentTarget.src = "/img1.png"; }}
               />
             </div>
             <div className="absolute -bottom-6 -left-6 font-mono text-[10px] text-obsidian bg-accent px-4 py-2 font-black uppercase tracking-widest">
@@ -42,10 +46,11 @@ export default function Bio() {
           >
             <div className="border-4 border-white p-2 bg-obsidian shadow-[15px_15px_0px_0px_rgba(255,255,255,1)]">
               <img 
-                src="/img2.png" 
+                src={img2} 
                 alt="Gabriel Veron - Batería" 
                 className="w-full h-auto grayscale contrast-150 brightness-75"
                 referrerPolicy="no-referrer"
+                onError={(e) => { e.currentTarget.src = "/img2.png"; }}
               />
             </div>
             <div className="absolute -top-6 -right-6 font-mono text-[10px] text-white bg-obsidian border-2 border-white px-4 py-2 font-black uppercase tracking-widest">
@@ -63,10 +68,11 @@ export default function Bio() {
           >
             <div className="border-4 border-accent p-2 bg-obsidian brutalist-shadow-small">
               <img 
-                src="/Ultimo%20Velo%20logo1.png" 
+                src={logoAlt} 
                 alt="Ultimo Velo Group" 
                 className="w-full h-auto grayscale contrast-125 brightness-90"
                 referrerPolicy="no-referrer"
+                onError={(e) => { e.currentTarget.src = "/Ultimo%20Velo%20logo1.png"; }}
               />
             </div>
             <div className="absolute -bottom-4 -right-4 font-mono text-[8px] text-obsidian bg-accent px-3 py-1 font-black uppercase tracking-widest">

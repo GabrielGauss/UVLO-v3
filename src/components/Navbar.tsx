@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import icoWt from '../assets/ico-wt.png';
 
 export default function Navbar() {
   return (
@@ -10,11 +11,15 @@ export default function Navbar() {
     >
       <div className="flex items-center gap-4">
         <img 
-          src="/ico-wt.png" 
+          src={icoWt} 
           alt="UV" 
           className="w-10 h-10 object-contain" 
           onError={(e) => {
             const target = e.currentTarget;
+            if (target.src.includes('assets')) {
+              target.src = "/ico-wt.png";
+              return;
+            }
             target.style.display = 'none';
             const parent = target.parentElement;
             if (parent) {
