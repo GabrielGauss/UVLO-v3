@@ -28,7 +28,6 @@ export default function Bio() {
                 src={img1} 
                 alt="Facundo & Ezequiel Romero" 
                 className="w-full h-auto grayscale contrast-125"
-                referrerPolicy="no-referrer"
                 onError={(e) => {
                   const target = e.currentTarget;
                   if (!target.src.includes('unsplash')) {
@@ -54,7 +53,6 @@ export default function Bio() {
                 src={img2} 
                 alt="Gabriel Veron - Batería" 
                 className="w-full h-auto grayscale contrast-150 brightness-75"
-                referrerPolicy="no-referrer"
                 onError={(e) => {
                   const target = e.currentTarget;
                   if (!target.src.includes('unsplash')) {
@@ -81,7 +79,6 @@ export default function Bio() {
                 src={uvlologowt} 
                 alt="Ultimo Velo Group" 
                 className="w-full h-auto grayscale contrast-125 brightness-90"
-                referrerPolicy="no-referrer"
                 onError={(e) => {
                   const target = e.currentTarget;
                   if (!target.src.includes('unsplash')) {

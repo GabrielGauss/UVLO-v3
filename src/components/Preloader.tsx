@@ -48,7 +48,6 @@ export default function Preloader() {
               src={icowt}
               alt="Ultimo Velo Icon"
               className="w-32 h-32 object-contain"
-              referrerPolicy="no-referrer"
               onError={(e) => {
                 const target = e.currentTarget;
                 target.style.display = 'none';

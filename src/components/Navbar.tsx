@@ -14,7 +14,6 @@ export default function Navbar() {
           src={icowt} 
           alt="UV" 
           className="w-10 h-10 object-contain" 
-          referrerPolicy="no-referrer"
           onError={(e) => {
             const target = e.currentTarget;
             target.style.display = 'none';

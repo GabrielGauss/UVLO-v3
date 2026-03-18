@@ -33,7 +33,6 @@ export default function Hero() {
           src={bg01} 
           alt="Live Performance" 
           className="w-full h-full object-cover opacity-50 scale-110 contrast-125 saturate-[0.5]"
-          referrerPolicy="no-referrer"
           onError={(e) => {
             const target = e.currentTarget;
             if (!target.src.includes('unsplash')) {
@@ -55,7 +54,6 @@ export default function Hero() {
             src={uvlologowt} 
             alt="" 
             className="w-full h-auto opacity-20" 
-            referrerPolicy="no-referrer"
             onError={(e) => {
               const target = e.currentTarget;
               target.style.display = 'none';
@@ -80,7 +78,6 @@ export default function Hero() {
                   src={uvlologowt} 
                   alt="" 
                   className="w-full h-auto max-h-[25vh] object-contain translate-x-2" 
-                  referrerPolicy="no-referrer"
                 />
               </motion.div>
               <motion.div 
@@ -91,7 +88,6 @@ export default function Hero() {
                   src={uvlologowt} 
                   alt="" 
                   className="w-full h-auto max-h-[25vh] object-contain -translate-x-2" 
-                  referrerPolicy="no-referrer"
                 />
               </motion.div>
             </>
@@ -108,7 +104,6 @@ export default function Hero() {
             }}
             transition={{ duration: 1.5, ease: "easeOut" }}
             className="w-full h-auto max-h-[25vh] object-contain drop-shadow-[0_0_50px_rgba(255,255,255,0.15)] relative z-20"
-            referrerPolicy="no-referrer"
             onError={(e) => {
               const target = e.currentTarget;
               target.style.display = 'none';

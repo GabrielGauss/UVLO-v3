@@ -15,7 +15,6 @@ export default function Footer() {
               src={uvlologowt} 
               alt="Ultimo Velo" 
               className="h-8 w-auto object-contain opacity-90 grayscale hover:grayscale-0 transition-all duration-1000 self-start" 
-              referrerPolicy="no-referrer"
               onError={(e) => {
                 const target = e.currentTarget;
                 target.style.display = 'none';

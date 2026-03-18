@@ -69,7 +69,6 @@ export default function Transmission() {
                 src={uvlologobl} 
                 alt="" 
                 className="absolute -right-10 -bottom-10 w-48 h-auto opacity-10 pointer-events-none grayscale invert" 
-                referrerPolicy="no-referrer"
                 onError={(e) => {
                   const target = e.currentTarget;
                   target.style.display = 'none';
