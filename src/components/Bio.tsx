@@ -1,4 +1,7 @@
 import { motion } from 'motion/react';
+import img1 from '../assets/images/img1.png';
+import img2 from '../assets/images/img2.png';
+import uvlologowt from '../assets/images/uvlologowt.png';
 
 export default function Bio() {
   return (
@@ -22,14 +25,11 @@ export default function Bio() {
           >
             <div className="border-4 border-accent p-2 bg-obsidian brutalist-shadow">
               <img 
-                src="/images/img1.png" 
+                src={img1} 
                 alt="Facundo & Ezequiel Romero" 
                 className="w-full h-auto grayscale contrast-125"
                 onError={(e) => {
-                  const target = e.currentTarget;
-                  if (!target.src.includes('unsplash')) {
-                    target.src = "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80";
-                  }
+                  console.error("Failed to load img1:", e.currentTarget.src);
                 }}
               />
             </div>
@@ -47,14 +47,11 @@ export default function Bio() {
           >
             <div className="border-4 border-white p-2 bg-obsidian shadow-[15px_15px_0px_0px_rgba(255,255,255,1)]">
               <img 
-                src="/images/img2.png" 
+                src={img2} 
                 alt="Gabriel Veron - Batería" 
                 className="w-full h-auto grayscale contrast-150 brightness-75"
                 onError={(e) => {
-                  const target = e.currentTarget;
-                  if (!target.src.includes('unsplash')) {
-                    target.src = "https://images.unsplash.com/photo-1514525253361-bee8a187499b?auto=format&fit=crop&w=800&q=80";
-                  }
+                  console.error("Failed to load img2:", e.currentTarget.src);
                 }}
               />
             </div>
@@ -73,14 +70,11 @@ export default function Bio() {
           >
             <div className="border-4 border-accent p-2 bg-obsidian brutalist-shadow-small">
               <img 
-                src="/images/uvlologowt.png" 
+                src={uvlologowt} 
                 alt="Ultimo Velo Group" 
                 className="w-full h-auto grayscale contrast-125 brightness-90"
                 onError={(e) => {
-                  const target = e.currentTarget;
-                  if (!target.src.includes('unsplash')) {
-                    target.src = "https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?auto=format&fit=crop&w=400&q=80";
-                  }
+                  console.error("Failed to load logo in bio:", e.currentTarget.src);
                 }}
               />
             </div>

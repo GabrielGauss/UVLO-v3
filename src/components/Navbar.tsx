@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import icowt from '../assets/images/icowt.png';
 
 export default function Navbar() {
   return (
@@ -10,12 +11,12 @@ export default function Navbar() {
     >
       <div className="flex items-center gap-4">
         <img 
-          src="/images/icowt.png" 
+          src={icowt} 
           alt="UV" 
           className="w-10 h-10 object-contain" 
           onError={(e) => {
-            const target = e.currentTarget;
-            target.style.display = 'none';
+            console.error("Failed to load nav icon:", e.currentTarget.src);
+            e.currentTarget.style.display = 'none';
           }}
         />
         <span className="font-mono text-[10px] tracking-[0.4em] uppercase hidden sm:block text-white/60">Ultimo Velo</span>

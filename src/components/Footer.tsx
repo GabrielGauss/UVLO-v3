@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { Instagram, Youtube, Facebook, ArrowUp } from 'lucide-react';
+import uvlologowt from '../assets/images/uvlologowt.png';
 
 export default function Footer() {
   return (
@@ -11,12 +12,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 items-start mb-16">
           <div className="md:col-span-4 flex flex-col gap-4">
             <img 
-              src="/images/uvlologowt.png" 
+              src={uvlologowt} 
               alt="Ultimo Velo" 
               className="h-8 w-auto object-contain opacity-90 grayscale hover:grayscale-0 transition-all duration-1000 self-start" 
               onError={(e) => {
-                const target = e.currentTarget;
-                target.style.display = 'none';
+                console.error("Failed to load footer logo:", e.currentTarget.src);
+                e.currentTarget.style.display = 'none';
               }}
             />
             <p className="font-mono text-[9px] text-white/20 leading-relaxed uppercase tracking-[0.1em] max-w-xs">

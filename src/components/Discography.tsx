@@ -65,7 +65,6 @@ export default function Discography() {
                   src={album.cover} 
                   alt={album.title}
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700"
-                  referrerPolicy="no-referrer"
                   onError={(e) => {
                     const target = e.currentTarget;
                     if (!target.src.includes('picsum')) {

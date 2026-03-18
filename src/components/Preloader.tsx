@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { useEffect, useState } from 'react';
+import icowt from '../assets/images/icowt.png';
 
 export default function Preloader() {
   const [isVisible, setIsVisible] = useState(true);
@@ -44,12 +45,12 @@ export default function Preloader() {
             className="relative"
           >
             <img
-              src="/images/icowt.png"
+              src={icowt}
               alt="Ultimo Velo Icon"
               className="w-32 h-32 object-contain"
               onError={(e) => {
-                const target = e.currentTarget;
-                target.style.display = 'none';
+                console.error("Failed to load preloader icon:", e.currentTarget.src);
+                e.currentTarget.style.display = 'none';
               }}
             />
           </motion.div>
