@@ -1,7 +1,4 @@
 import { motion } from 'motion/react';
-import img1 from '../assets/img1.png';
-import img2 from '../assets/img2.png';
-import uvlologowt from '../assets/uvlologowt.png';
 
 export default function Bio() {
   return (
@@ -25,7 +22,7 @@ export default function Bio() {
           >
             <div className="border-4 border-accent p-2 bg-obsidian brutalist-shadow">
               <img 
-                src={img1} 
+                src="/images/img1.png" 
                 alt="Facundo & Ezequiel Romero" 
                 className="w-full h-auto grayscale contrast-125"
                 onError={(e) => {
@@ -50,7 +47,7 @@ export default function Bio() {
           >
             <div className="border-4 border-white p-2 bg-obsidian shadow-[15px_15px_0px_0px_rgba(255,255,255,1)]">
               <img 
-                src={img2} 
+                src="/images/img2.png" 
                 alt="Gabriel Veron - Batería" 
                 className="w-full h-auto grayscale contrast-150 brightness-75"
                 onError={(e) => {
@@ -76,7 +73,7 @@ export default function Bio() {
           >
             <div className="border-4 border-accent p-2 bg-obsidian brutalist-shadow-small">
               <img 
-                src={uvlologowt} 
+                src="/images/uvlologowt.png" 
                 alt="Ultimo Velo Group" 
                 className="w-full h-auto grayscale contrast-125 brightness-90"
                 onError={(e) => {

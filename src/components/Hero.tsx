@@ -1,7 +1,5 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useEffect, useState, useRef } from 'react';
-import bg01 from '../assets/bg01.png';
-import uvlologowt from '../assets/uvlologowt.png';
 
 export default function Hero() {
   const [isGlitching, setIsGlitching] = useState(false);
@@ -30,7 +28,7 @@ export default function Hero() {
       >
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-obsidian/60 to-obsidian z-10" />
         <img 
-          src={bg01} 
+          src="/images/bg01.png" 
           alt="Live Performance" 
           className="w-full h-full object-cover opacity-50 scale-110 contrast-125 saturate-[0.5]"
           onError={(e) => {
@@ -51,7 +49,7 @@ export default function Hero() {
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-auto pointer-events-none z-0"
         >
           <img 
-            src={uvlologowt} 
+            src="/images/uvlologowt.png" 
             alt="" 
             className="w-full h-auto opacity-20" 
             onError={(e) => {
@@ -75,7 +73,7 @@ export default function Hero() {
                 className="absolute inset-0 z-10 mix-blend-screen invert opacity-30"
               >
                 <img 
-                  src={uvlologowt} 
+                  src="/images/uvlologowt.png" 
                   alt="" 
                   className="w-full h-auto max-h-[25vh] object-contain translate-x-2" 
                 />
@@ -85,7 +83,7 @@ export default function Hero() {
                 className="absolute inset-0 z-10 mix-blend-multiply opacity-30"
               >
                 <img 
-                  src={uvlologowt} 
+                  src="/images/uvlologowt.png" 
                   alt="" 
                   className="w-full h-auto max-h-[25vh] object-contain -translate-x-2" 
                 />
@@ -94,7 +92,7 @@ export default function Hero() {
           )}
  
           <motion.img 
-            src={uvlologowt} 
+            src="/images/uvlologowt.png" 
             alt="Ultimo Velo Logo" 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ 

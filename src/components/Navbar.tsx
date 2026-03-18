@@ -1,5 +1,4 @@
 import { motion } from 'motion/react';
-import icowt from '../assets/icowt.png';
 
 export default function Navbar() {
   return (
@@ -11,7 +10,7 @@ export default function Navbar() {
     >
       <div className="flex items-center gap-4">
         <img 
-          src={icowt} 
+          src="/images/icowt.png" 
           alt="UV" 
           className="w-10 h-10 object-contain" 
           onError={(e) => {
