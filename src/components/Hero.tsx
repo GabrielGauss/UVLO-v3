@@ -28,7 +28,7 @@ export default function Hero() {
       >
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-obsidian/60 to-obsidian z-10" />
         <img 
-          src="/bg-01.png" 
+          src="/bg01.png" 
           alt="Live Performance" 
           className="w-full h-full object-cover opacity-50 scale-110 contrast-125 saturate-[0.5]"
           referrerPolicy="no-referrer"
@@ -42,7 +42,7 @@ export default function Hero() {
         {/* Animated Noise Texture */}
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')] brightness-100 contrast-150" />
         
-        {/* SVG Watermark */}
+        {/* Watermark */}
         <motion.div 
           initial={{ opacity: 0, rotate: -10 }}
           animate={{ opacity: 0.05, rotate: 0 }}
@@ -50,10 +50,14 @@ export default function Hero() {
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-auto pointer-events-none z-0"
         >
           <img 
-            src="/UVLO_Logo_V_BN.svg" 
+            src="/uvlologowt.png" 
             alt="" 
             className="w-full h-auto opacity-20" 
             referrerPolicy="no-referrer"
+            onError={(e) => {
+              const target = e.currentTarget;
+              target.style.display = 'none';
+            }}
           />
         </motion.div>
       </motion.div>
@@ -71,7 +75,7 @@ export default function Hero() {
                 className="absolute inset-0 z-10 mix-blend-screen invert opacity-30"
               >
                 <img 
-                  src="/uvlo-logo-wt.png" 
+                  src="/uvlologowt.png" 
                   alt="" 
                   className="w-full h-auto max-h-[25vh] object-contain translate-x-2" 
                   referrerPolicy="no-referrer"
@@ -82,7 +86,7 @@ export default function Hero() {
                 className="absolute inset-0 z-10 mix-blend-multiply opacity-30"
               >
                 <img 
-                  src="/uvlo-logo-wt.png" 
+                  src="/uvlologowt.png" 
                   alt="" 
                   className="w-full h-auto max-h-[25vh] object-contain -translate-x-2" 
                   referrerPolicy="no-referrer"
@@ -92,7 +96,7 @@ export default function Hero() {
           )}
  
           <motion.img 
-            src="/uvlo-logo-wt.png" 
+            src="/uvlologowt.png" 
             alt="Ultimo Velo Logo" 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ 

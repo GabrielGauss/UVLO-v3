@@ -26,6 +26,12 @@ export default function Bio() {
                 alt="Facundo & Ezequiel Romero" 
                 className="w-full h-auto grayscale contrast-125"
                 referrerPolicy="no-referrer"
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (!target.src.includes('picsum')) {
+                    target.src = "https://picsum.photos/seed/uv-band1/800/600?grayscale";
+                  }
+                }}
               />
             </div>
             <div className="absolute -bottom-6 -left-6 font-mono text-[10px] text-obsidian bg-accent px-4 py-2 font-black uppercase tracking-widest">
@@ -46,6 +52,12 @@ export default function Bio() {
                 alt="Gabriel Veron - Batería" 
                 className="w-full h-auto grayscale contrast-150 brightness-75"
                 referrerPolicy="no-referrer"
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (!target.src.includes('picsum')) {
+                    target.src = "https://picsum.photos/seed/uv-band2/800/600?grayscale";
+                  }
+                }}
               />
             </div>
             <div className="absolute -top-6 -right-6 font-mono text-[10px] text-white bg-obsidian border-2 border-white px-4 py-2 font-black uppercase tracking-widest">
@@ -63,10 +75,16 @@ export default function Bio() {
           >
             <div className="border-4 border-accent p-2 bg-obsidian brutalist-shadow-small">
               <img 
-                src="/ultimo-velo-logo-alt.png" 
+                src="/logo-alt.png" 
                 alt="Ultimo Velo Group" 
                 className="w-full h-auto grayscale contrast-125 brightness-90"
                 referrerPolicy="no-referrer"
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (!target.src.includes('picsum')) {
+                    target.src = "https://picsum.photos/seed/uv-logo-alt/400/400?grayscale";
+                  }
+                }}
               />
             </div>
             <div className="absolute -bottom-4 -right-4 font-mono text-[8px] text-obsidian bg-accent px-3 py-1 font-black uppercase tracking-widest">
