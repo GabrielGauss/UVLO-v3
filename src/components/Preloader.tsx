@@ -44,22 +44,10 @@ export default function Preloader() {
             className="relative"
           >
             <img
-              src="/icowt.png"
+              src={`${import.meta.env.BASE_URL}icowt.png`}
               alt="Ultimo Velo Icon"
               className="w-32 h-32 object-contain"
               referrerPolicy="no-referrer"
-              onError={(e) => {
-                // Fallback if image fails
-                const target = e.currentTarget;
-                target.style.display = 'none';
-                const parent = target.parentElement;
-                if (parent) {
-                  const span = document.createElement('span');
-                  span.className = 'text-6xl font-serif text-white';
-                  span.innerText = 'UV';
-                  parent.appendChild(span);
-                }
-              }}
             />
           </motion.div>
           <motion.div 

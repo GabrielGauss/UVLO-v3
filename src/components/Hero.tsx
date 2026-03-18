@@ -28,16 +28,10 @@ export default function Hero() {
       >
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-obsidian/60 to-obsidian z-10" />
         <img 
-          src="/bg01.png" 
+          src={`${import.meta.env.BASE_URL}bg01.png`} 
           alt="Live Performance" 
           className="w-full h-full object-cover opacity-50 scale-110 contrast-125 saturate-[0.5]"
           referrerPolicy="no-referrer"
-          onError={(e) => {
-            const target = e.currentTarget;
-            if (!target.src.includes('unsplash')) {
-              target.src = "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=1920&q=80";
-            }
-          }}
         />
         {/* Animated Noise Texture */}
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')] brightness-100 contrast-150" />
@@ -50,14 +44,10 @@ export default function Hero() {
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-auto pointer-events-none z-0"
         >
           <img 
-            src="/uvlologowt.png?v=1" 
+            src={`${import.meta.env.BASE_URL}uvlologowt.png`} 
             alt="" 
             className="w-full h-auto opacity-20" 
             referrerPolicy="no-referrer"
-            onError={(e) => {
-              const target = e.currentTarget;
-              target.style.display = 'none';
-            }}
           />
         </motion.div>
       </motion.div>
@@ -75,7 +65,7 @@ export default function Hero() {
                 className="absolute inset-0 z-10 mix-blend-screen invert opacity-30"
               >
                 <img 
-                  src="/uvlologowt.png" 
+                  src={`${import.meta.env.BASE_URL}uvlologowt.png`} 
                   alt="" 
                   className="w-full h-auto max-h-[25vh] object-contain translate-x-2" 
                   referrerPolicy="no-referrer"
@@ -86,7 +76,7 @@ export default function Hero() {
                 className="absolute inset-0 z-10 mix-blend-multiply opacity-30"
               >
                 <img 
-                  src="/uvlologowt.png" 
+                  src={`${import.meta.env.BASE_URL}uvlologowt.png`} 
                   alt="" 
                   className="w-full h-auto max-h-[25vh] object-contain -translate-x-2" 
                   referrerPolicy="no-referrer"
@@ -96,7 +86,7 @@ export default function Hero() {
           )}
  
           <motion.img 
-            src="/uvlologowt.png?v=1" 
+            src={`${import.meta.env.BASE_URL}uvlologowt.png`} 
             alt="Ultimo Velo Logo" 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ 
@@ -107,17 +97,6 @@ export default function Hero() {
             transition={{ duration: 1.5, ease: "easeOut" }}
             className="w-full h-auto max-h-[25vh] object-contain drop-shadow-[0_0_50px_rgba(255,255,255,0.15)] relative z-20"
             referrerPolicy="no-referrer"
-            onError={(e) => {
-              const target = e.currentTarget;
-              target.style.display = 'none';
-              const parent = target.parentElement;
-              if (parent) {
-                const h1 = document.createElement('h1');
-                h1.className = 'text-[10vw] text-white text-center italic leading-none tracking-tighter font-serif';
-                h1.innerHTML = 'ULTIMO<br/>VELO';
-                parent.appendChild(h1);
-              }
-            }}
           />
         </div>
         
