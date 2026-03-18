@@ -15,10 +15,6 @@ export default function Footer() {
               src={uvlologowt} 
               alt="Ultimo Velo" 
               className="h-8 w-auto object-contain opacity-90 grayscale hover:grayscale-0 transition-all duration-1000 self-start" 
-              onError={(e) => {
-                console.error("Failed to load footer logo:", e.currentTarget.src);
-                e.currentTarget.style.display = 'none';
-              }}
             />
             <p className="font-mono text-[9px] text-white/20 leading-relaxed uppercase tracking-[0.1em] max-w-xs">
               Fricción sonora desde el corazón industrial de Mar del Plata. Transmitiendo frecuencias crudas desde el amanecer de la era de las máquinas.

@@ -33,9 +33,6 @@ export default function Hero() {
           src={bg01} 
           alt="Live Performance" 
           className="w-full h-full object-cover opacity-50 scale-110 contrast-125 saturate-[0.5]"
-          onError={(e) => {
-            console.error("Failed to load hero background:", e.currentTarget.src);
-          }}
         />
         {/* Animated Noise Texture */}
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')] brightness-100 contrast-150" />
@@ -51,10 +48,6 @@ export default function Hero() {
             src={uvlologowt} 
             alt="" 
             className="w-full h-auto opacity-20" 
-            onError={(e) => {
-              const target = e.currentTarget;
-              target.style.display = 'none';
-            }}
           />
         </motion.div>
       </motion.div>
@@ -101,17 +94,6 @@ export default function Hero() {
             }}
             transition={{ duration: 1.5, ease: "easeOut" }}
             className="w-full h-auto max-h-[25vh] object-contain drop-shadow-[0_0_50px_rgba(255,255,255,0.15)] relative z-20"
-            onError={(e) => {
-              const target = e.currentTarget;
-              target.style.display = 'none';
-              const parent = target.parentElement;
-              if (parent) {
-                const h1 = document.createElement('h1');
-                h1.className = 'text-[10vw] text-white text-center italic leading-none tracking-tighter font-serif';
-                h1.innerHTML = 'ULTIMO<br/>VELO';
-                parent.appendChild(h1);
-              }
-            }}
           />
         </div>
         

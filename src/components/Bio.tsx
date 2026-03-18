@@ -28,9 +28,6 @@ export default function Bio() {
                 src={img1} 
                 alt="Facundo & Ezequiel Romero" 
                 className="w-full h-auto grayscale contrast-125"
-                onError={(e) => {
-                  console.error("Failed to load img1:", e.currentTarget.src);
-                }}
               />
             </div>
             <div className="absolute -bottom-6 -left-6 font-mono text-[10px] text-obsidian bg-accent px-4 py-2 font-black uppercase tracking-widest">
@@ -50,9 +47,6 @@ export default function Bio() {
                 src={img2} 
                 alt="Gabriel Veron - Batería" 
                 className="w-full h-auto grayscale contrast-150 brightness-75"
-                onError={(e) => {
-                  console.error("Failed to load img2:", e.currentTarget.src);
-                }}
               />
             </div>
             <div className="absolute -top-6 -right-6 font-mono text-[10px] text-white bg-obsidian border-2 border-white px-4 py-2 font-black uppercase tracking-widest">
@@ -73,9 +67,6 @@ export default function Bio() {
                 src={uvlologowt} 
                 alt="Ultimo Velo Group" 
                 className="w-full h-auto grayscale contrast-125 brightness-90"
-                onError={(e) => {
-                  console.error("Failed to load logo in bio:", e.currentTarget.src);
-                }}
               />
             </div>
             <div className="absolute -bottom-4 -right-4 font-mono text-[8px] text-obsidian bg-accent px-3 py-1 font-black uppercase tracking-widest">
