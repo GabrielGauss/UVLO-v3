@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { useEffect, useState } from 'react';
+import icowt from '../assets/icowt.png';
 
 export default function Preloader() {
   const [isVisible, setIsVisible] = useState(true);
@@ -44,10 +45,14 @@ export default function Preloader() {
             className="relative"
           >
             <img
-              src={`${import.meta.env.BASE_URL}icowt.png`}
+              src={icowt}
               alt="Ultimo Velo Icon"
               className="w-32 h-32 object-contain"
               referrerPolicy="no-referrer"
+              onError={(e) => {
+                const target = e.currentTarget;
+                target.style.display = 'none';
+              }}
             />
           </motion.div>
           <motion.div 

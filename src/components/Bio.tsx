@@ -1,4 +1,7 @@
 import { motion } from 'motion/react';
+import img1 from '../assets/img1.png';
+import img2 from '../assets/img2.png';
+import uvlologowt from '../assets/uvlologowt.png';
 
 export default function Bio() {
   return (
@@ -22,10 +25,16 @@ export default function Bio() {
           >
             <div className="border-4 border-accent p-2 bg-obsidian brutalist-shadow">
               <img 
-                src={`${import.meta.env.BASE_URL}img1.png`} 
+                src={img1} 
                 alt="Facundo & Ezequiel Romero" 
                 className="w-full h-auto grayscale contrast-125"
                 referrerPolicy="no-referrer"
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (!target.src.includes('unsplash')) {
+                    target.src = "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80";
+                  }
+                }}
               />
             </div>
             <div className="absolute -bottom-6 -left-6 font-mono text-[10px] text-obsidian bg-accent px-4 py-2 font-black uppercase tracking-widest">
@@ -42,10 +51,16 @@ export default function Bio() {
           >
             <div className="border-4 border-white p-2 bg-obsidian shadow-[15px_15px_0px_0px_rgba(255,255,255,1)]">
               <img 
-                src={`${import.meta.env.BASE_URL}img2.png`} 
+                src={img2} 
                 alt="Gabriel Veron - Batería" 
                 className="w-full h-auto grayscale contrast-150 brightness-75"
                 referrerPolicy="no-referrer"
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (!target.src.includes('unsplash')) {
+                    target.src = "https://images.unsplash.com/photo-1514525253361-bee8a187499b?auto=format&fit=crop&w=800&q=80";
+                  }
+                }}
               />
             </div>
             <div className="absolute -top-6 -right-6 font-mono text-[10px] text-white bg-obsidian border-2 border-white px-4 py-2 font-black uppercase tracking-widest">
@@ -63,10 +78,16 @@ export default function Bio() {
           >
             <div className="border-4 border-accent p-2 bg-obsidian brutalist-shadow-small">
               <img 
-                src={`${import.meta.env.BASE_URL}uvlologowt.png`} 
+                src={uvlologowt} 
                 alt="Ultimo Velo Group" 
                 className="w-full h-auto grayscale contrast-125 brightness-90"
                 referrerPolicy="no-referrer"
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (!target.src.includes('unsplash')) {
+                    target.src = "https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?auto=format&fit=crop&w=400&q=80";
+                  }
+                }}
               />
             </div>
             <div className="absolute -bottom-4 -right-4 font-mono text-[8px] text-obsidian bg-accent px-3 py-1 font-black uppercase tracking-widest">
