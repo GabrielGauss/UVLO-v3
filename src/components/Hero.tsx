@@ -28,14 +28,14 @@ export default function Hero() {
       >
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-obsidian/60 to-obsidian z-10" />
         <img 
-          src="/bg01.png?v=1" 
+          src="/bg01.png" 
           alt="Live Performance" 
           className="w-full h-full object-cover opacity-50 scale-110 contrast-125 saturate-[0.5]"
           referrerPolicy="no-referrer"
           onError={(e) => {
             const target = e.currentTarget;
-            if (!target.src.includes('picsum')) {
-              target.src = "https://picsum.photos/seed/concert-rock-live/1920/1080?grayscale";
+            if (!target.src.includes('unsplash')) {
+              target.src = "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=1920&q=80";
             }
           }}
         />
