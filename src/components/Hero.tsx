@@ -28,14 +28,14 @@ export default function Hero() {
       >
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-obsidian/60 to-obsidian z-10" />
         <img 
-          src="/bg01.png" 
+          src="/bg01.png?v=1" 
           alt="Live Performance" 
           className="w-full h-full object-cover opacity-50 scale-110 contrast-125 saturate-[0.5]"
           referrerPolicy="no-referrer"
           onError={(e) => {
             const target = e.currentTarget;
             if (!target.src.includes('picsum')) {
-              target.src = "https://picsum.photos/seed/rock-band-live/1920/1080?grayscale";
+              target.src = "https://picsum.photos/seed/concert-rock-live/1920/1080?grayscale";
             }
           }}
         />
@@ -50,7 +50,7 @@ export default function Hero() {
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-auto pointer-events-none z-0"
         >
           <img 
-            src="/uvlologowt.png" 
+            src="/uvlologowt.png?v=1" 
             alt="" 
             className="w-full h-auto opacity-20" 
             referrerPolicy="no-referrer"
@@ -96,7 +96,7 @@ export default function Hero() {
           )}
  
           <motion.img 
-            src="/uvlologowt.png" 
+            src="/uvlologowt.png?v=1" 
             alt="Ultimo Velo Logo" 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ 

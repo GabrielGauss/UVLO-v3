@@ -65,7 +65,7 @@ export default function Transmission() {
           <div className="flex flex-col gap-8">
             <div className="bg-obsidian p-8 brutalist-shadow-small relative overflow-hidden">
               <img 
-                src="/uvlologobl.png" 
+                src="/uvlologobl.png?v=1" 
                 alt="" 
                 className="absolute -right-10 -bottom-10 w-48 h-auto opacity-10 pointer-events-none grayscale invert" 
                 referrerPolicy="no-referrer"

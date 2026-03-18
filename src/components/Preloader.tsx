@@ -44,7 +44,7 @@ export default function Preloader() {
             className="relative"
           >
             <img
-              src="/icowt.png"
+              src="/icowt.png?v=1"
               alt="Ultimo Velo Icon"
               className="w-32 h-32 object-contain"
               referrerPolicy="no-referrer"
