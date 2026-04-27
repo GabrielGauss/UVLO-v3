@@ -1,7 +1,8 @@
 import { motion } from 'motion/react';
-import img1 from '../assets/images/img1.png';
-import img2 from '../assets/images/img2.png';
-import uvlologowt from '../assets/images/uvlologowt.png';
+
+const img1 = '/images/img1.png';
+const img2 = '/images/img2.png';
+const uvlologowt = '/images/uvlologowt.png';
 
 export default function Bio() {
   return (

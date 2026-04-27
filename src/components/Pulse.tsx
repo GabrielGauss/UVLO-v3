@@ -3,14 +3,14 @@ import { Music, Play } from 'lucide-react';
 
 export default function Pulse() {
   return (
-    <section id="pulse" className="relative py-48 px-6 flex items-center justify-center overflow-hidden bg-obsidian border-b border-white/5">
+    <section id="pulse" className="relative py-24 md:py-48 px-6 flex items-center justify-center overflow-hidden bg-obsidian border-b border-white/5">
       {/* Spiced Technical Background */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute inset-0 opacity-[0.05]" 
              style={{ backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)', backgroundSize: '100px 100px' }} />
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(255,100,0,0.1)_0%,transparent_70%)]" />
-        <div className="absolute top-1/2 left-0 w-full h-[1px] bg-accent/20" />
-        <div className="absolute top-0 left-1/2 w-[1px] h-full bg-accent/20" />
+        <div className="absolute top-1/2 left-0 w-full h-px bg-accent/20" />
+        <div className="absolute top-0 left-1/2 w-px h-full bg-accent/20" />
       </div>
 
       <motion.div
@@ -41,22 +41,23 @@ export default function Pulse() {
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-lg">
-              <a 
-                href="https://open.spotify.com/artist/37i9dQZF1DZ06evO29S97N" 
-                target="_blank" 
+              <a
+                href="https://open.spotify.com/artist/5Ydrxg0oDTFM50mpcJeH1w"
+                target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-4 py-6 border-2 border-white text-white font-mono text-xs uppercase tracking-widest hover:bg-white hover:text-obsidian transition-all duration-300"
+                className="flex items-center justify-center gap-4 py-6 border-2 border-white text-white font-mono text-xs uppercase tracking-widest hover:bg-accent hover:border-accent hover:text-signal transition-all duration-300"
               >
                 <Music size={16} />
-                Spotify_Link
+                Spotify
               </a>
-              <a 
-                href="#" 
-                className="flex items-center justify-center gap-4 py-6 border-2 border-accent text-accent font-mono text-xs uppercase tracking-widest hover:bg-accent hover:text-obsidian transition-all duration-300"
+              <span
+                aria-disabled="true"
+                className="flex items-center justify-center gap-4 py-6 border-2 border-accent/30 text-accent/30 font-mono text-xs uppercase tracking-widest cursor-not-allowed select-none"
+                title="Apple Music — próximamente"
               >
                 <Play size={16} />
                 Apple_Music
-              </a>
+              </span>
             </div>
           </div>
         </div>

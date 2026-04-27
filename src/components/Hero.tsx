@@ -1,7 +1,8 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useEffect, useState, useRef } from 'react';
-import bg01 from '../assets/images/bg01.png';
-import uvlologowt from '../assets/images/uvlologowt.png';
+
+const bg01 = '/images/bg01.png';
+const uvlologowt = '/images/uvlologowt.png';
 
 export default function Hero() {
   const [isGlitching, setIsGlitching] = useState(false);
@@ -28,14 +29,12 @@ export default function Hero() {
         style={{ y: bgY }}
         className="absolute inset-0 z-0"
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-obsidian/60 to-obsidian z-10" />
-        <img 
-          src={bg01} 
-          alt="Live Performance" 
-          className="w-full h-full object-cover opacity-50 scale-110 contrast-125 saturate-[0.5]"
+        <div className="absolute inset-0 bg-gradient-to-b from-accent/10 via-obsidian/65 to-obsidian z-10" />
+        <img
+          src={bg01}
+          alt="Live Performance"
+          className="w-full h-full object-cover opacity-55 scale-110 contrast-130 saturate-[0.3]"
         />
-        {/* Animated Noise Texture */}
-        <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')] brightness-100 contrast-150" />
         
         {/* Watermark */}
         <motion.div 
@@ -67,7 +66,7 @@ export default function Hero() {
                 <img 
                   src={uvlologowt} 
                   alt="" 
-                  className="w-full h-auto max-h-[25vh] object-contain translate-x-2" 
+                  className="w-full h-auto max-h-[29vh] object-contain translate-x-2" 
                 />
               </motion.div>
               <motion.div 
@@ -77,7 +76,7 @@ export default function Hero() {
                 <img 
                   src={uvlologowt} 
                   alt="" 
-                  className="w-full h-auto max-h-[25vh] object-contain -translate-x-2" 
+                  className="w-full h-auto max-h-[29vh] object-contain -translate-x-2" 
                 />
               </motion.div>
             </>
@@ -87,13 +86,13 @@ export default function Hero() {
             src={uvlologowt} 
             alt="Ultimo Velo Logo" 
             initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ 
-              opacity: 1, 
+            animate={{
+              opacity: 1,
               scale: 1,
-              filter: isGlitching ? 'hue-rotate(90deg) brightness(1.5)' : 'hue-rotate(0deg) brightness(1)'
+              filter: isGlitching ? 'hue-rotate(180deg) brightness(2) saturate(3)' : 'hue-rotate(0deg) brightness(1) saturate(1)'
             }}
             transition={{ duration: 1.5, ease: "easeOut" }}
-            className="w-full h-auto max-h-[25vh] object-contain drop-shadow-[0_0_50px_rgba(255,255,255,0.15)] relative z-20"
+            className="w-full h-auto max-h-[29vh] object-contain drop-shadow-[0_0_50px_rgba(255,255,255,0.15)] relative z-20"
           />
         </div>
         
@@ -103,10 +102,10 @@ export default function Hero() {
           transition={{ delay: 1.2, duration: 0.8 }}
           className="mt-12 flex flex-col items-center gap-6"
         >
-          <div className="flex items-center gap-6">
-            <div className="h-[1px] w-12 bg-white/10" />
-            <p className="font-mono text-[9px] tracking-[1em] uppercase text-white/40">Mar del Plata // Hard Rock</p>
-            <div className="h-[1px] w-12 bg-white/10" />
+          <div className="flex items-center gap-4">
+            <div className="hidden sm:block h-px w-12 bg-white/10 shrink-0" />
+            <p className="font-mono text-[9px] tracking-[0.3em] sm:tracking-[0.6em] md:tracking-[1em] uppercase text-white/40 text-center">Mar del Plata · Hard Rock · Desde 2017</p>
+            <div className="hidden sm:block h-px w-12 bg-white/10 shrink-0" />
           </div>
           
           <motion.a 
